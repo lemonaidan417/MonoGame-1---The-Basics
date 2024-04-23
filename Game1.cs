@@ -9,8 +9,10 @@ namespace MonoGame_1___The_Basics
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        Texture2D dinoTexture;
-        Texture2D pikachuTexture;
+        Texture2D backgroundTexture;
+        Texture2D thebebopTexture;
+        Texture2D thebebopminiTexture;
+        Texture2D gundamstrikeTexture;
 
         public Game1()
         {
@@ -23,8 +25,8 @@ namespace MonoGame_1___The_Basics
         {
             // TODO: Add your initialization logic here
 
-            _graphics.PreferredBackBufferWidth = 800; // Sets the width of the window
-            _graphics.PreferredBackBufferHeight = 500; // Sets the height of the window
+            _graphics.PreferredBackBufferWidth = 634; // Sets the width of the window
+            _graphics.PreferredBackBufferHeight = 472; // Sets the height of the window
             _graphics.ApplyChanges(); // Applies the new dimensions
 
             this.Window.Title = "Figuring Out MonoGame";
@@ -37,8 +39,11 @@ namespace MonoGame_1___The_Basics
             _spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
-            dinoTexture = Content.Load<Texture2D>("dino");
-            pikachuTexture = Content.Load<Texture2D>("surprised.pikachu");
+            backgroundTexture = Content.Load<Texture2D>("cowboy-bebop-background");
+            thebebopTexture = Content.Load<Texture2D>("thebebop");
+            thebebopminiTexture = Content.Load<Texture2D>("thebebopmini");
+            gundamstrikeTexture = Content.Load<Texture2D>("gundamstrike");
+
 
         }
 
@@ -59,8 +64,10 @@ namespace MonoGame_1___The_Basics
             // TODO: Add your drawing code here
             _spriteBatch.Begin();
 
-            _spriteBatch.Draw(dinoTexture, new Vector2(100, 100), Color.BlueViolet);
-            _spriteBatch.Draw(pikachuTexture, new Vector2(300, 300), Color.White);
+            _spriteBatch.Draw(backgroundTexture, new Vector2(0, 0), Color.White);
+            _spriteBatch.Draw(thebebopTexture, new Vector2(400, 25), Color.White);
+            _spriteBatch.Draw(thebebopminiTexture, new Vector2(425, 225), Color.White);
+            _spriteBatch.Draw(gundamstrikeTexture, new Vector2(100, 10), Color.White);
 
 
             _spriteBatch.End();
