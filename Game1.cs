@@ -42,7 +42,6 @@ namespace MonoGame_1___The_Basics
             backgroundTexture = Content.Load<Texture2D>("cowboy-bebop-background");
             thebebopTexture = Content.Load<Texture2D>("thebebop");
             thebebopminiTexture = Content.Load<Texture2D>("thebebopmini");
-            gundamstrikeTexture = Content.Load<Texture2D>("gundamstrike");
 
 
         }
@@ -65,9 +64,8 @@ namespace MonoGame_1___The_Basics
             _spriteBatch.Begin();
 
             _spriteBatch.Draw(backgroundTexture, new Vector2(0, 0), Color.White);
-            _spriteBatch.Draw(thebebopTexture, new Vector2(400, 25), Color.White);
+            _spriteBatch.Draw(thebebopTexture, new Rectangle(100, 200, 300, 200), Color.White);
             _spriteBatch.Draw(thebebopminiTexture, new Vector2(425, 225), Color.White);
-            _spriteBatch.Draw(gundamstrikeTexture, new Vector2(100, 10), Color.White);
 
 
             _spriteBatch.End();
